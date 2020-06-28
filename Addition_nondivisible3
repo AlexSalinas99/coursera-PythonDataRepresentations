@@ -1,0 +1,13 @@
+""" Problem 7, Week 2 of Coursera's Python Data Representations
+"""
+def strange_sum(numbers):
+    """ Addition of numbers non divisible by 3 from a list
+    """
+    total = 0
+    for item in numbers:
+        if item % 3 != 0:
+            total += item
+    return total
+
+print(strange_sum([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]))
+print(strange_sum(list(range(123)) + list(range(77))))
