@@ -1,0 +1,29 @@
+"""
+Template - Remove duplicates from a list while preserving the order of items
+"""
+
+
+def remove_duplicates(items):
+    """
+    Given a list, return a list with duplicate items removed
+    and the remaining items in the same order
+    """
+    neat_list = []
+    for choice in items:
+        if choice not in neat_list:
+            neat_list.append(choice)
+    return neat_list
+
+
+# Test code
+print(remove_duplicates([]))
+print(remove_duplicates([1, 2, 3, 4]))
+print(remove_duplicates([1, 2, 2, 3, 3, 3, 4, 5, 6, 6]))
+print(remove_duplicates(["cat", "dog", "cat", "pig", "cow", "cat", "pig", "pug"]))
+
+
+# Output
+#[]
+#[1, 2, 3, 4]
+#[1, 2, 3, 4, 5, 6]
+#['cat', 'dog', 'pig', 'cow', 'pug']
