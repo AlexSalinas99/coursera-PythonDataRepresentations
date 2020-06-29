@@ -1,0 +1,22 @@
+"""
+Implement the Sieve of Eratosthenes
+In this case, I implement it as my understanding acknowledging this is a different approach than per usual (e.g.boolean)
+"""
+
+def compute_primes(bound):
+    """
+    Return a list of the prime numbers in range(2, bound)
+    """
+    
+    answer = list(range(2, bound))
+    for divisor in range(2, bound):
+        # Remove appropriate multiples of divisor from answer
+        for number in answer: 
+            if number % divisor == 0 and number > divisor:
+                answer.remove(number)
+    return answer
+
+print(len(compute_primes(200)))
+print(len(compute_primes(2000)))
+print(compute_primes(200))
+print(compute_primes(2000))
