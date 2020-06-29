@@ -1,0 +1,19 @@
+"""Problem 6, Week 3 of course Data Representations.
+Given a list fib = [0, 1], write a loop that appends the sum
+of the last two items in fib to the end of fib. What is the 
+value of the last item in fib after twenty iterations of this
+loop? Enter the answer below as an integer.
+"""
+
+def fib(listing):
+    """ Basically creating a Fibonacci sequence for the first 22 terms
+    """
+    addition = 0
+    for choice in listing:
+        if len(listing) < 22:
+            addition = listing[len(listing) - 1] + listing[len(listing) - 2]
+            listing.append(addition)
+    return listing
+
+list1 = [0, 1]
+print(fib(list1))
